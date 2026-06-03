@@ -53,6 +53,18 @@ python3 -m http.server 8080
     └── sortiment.js     # Katalog-Filter
 ```
 
+## Live-Vorschau & Veröffentlichung
+
+**Sofort-Vorschau (ohne Setup):** Da das Repository öffentlich ist, lässt sich die
+Seite direkt über den githack-CDN ansehen:
+`https://raw.githack.com/emilianbleimn/Emilios-Koki/main/index.html`
+(statt `main` ggf. den Branch- oder Commit-Namen verwenden).
+
+**Eigene Adresse (GitHub Pages):** Repo → *Settings* → *Pages* →
+*Build and deployment* → *Source: „Deploy from a branch"* → Branch `main`,
+Ordner `/(root)` → *Save*. Nach kurzer Zeit ist die Seite unter
+`https://emilianbleimn.github.io/Emilios-Koki/` erreichbar.
+
 ## Hinweise
 
 - Das Kontaktformular ist clientseitig (öffnet das E-Mail-Programm) und kann bei
