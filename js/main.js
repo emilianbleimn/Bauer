@@ -15,7 +15,7 @@
   function applyTheme(theme) {
     root.setAttribute("data-theme", theme);
     const meta = $('meta[name="theme-color"]');
-    if (meta) meta.setAttribute("content", theme === "dark" ? "#0d1411" : "#1c7350");
+    if (meta) meta.setAttribute("content", theme === "dark" ? "#16110a" : "#8f5a22");
   }
 
   const stored = localStorage.getItem(THEME_KEY);
