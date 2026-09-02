@@ -5,7 +5,7 @@ Dämmstoffe für Wand, Dach, Boden und Keller, persönliche Beratung und das
 komplette Zubehör aus einer Hand.
 
 Diese Neugestaltung legt den Fokus auf ein modernes Erscheinungsbild, ein
-stimmiges Farbkonzept (Eco-Grün + warmes Amber), fließende Übergänge und eine
+stimmiges Farbkonzept (Markengrün #74bc20 + Navy #01205e, Schrift Figtree), fließende Übergänge und eine
 klare, übersichtliche Struktur.
 
 ## Seiten
