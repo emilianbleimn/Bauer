@@ -15,12 +15,12 @@
   function applyTheme(theme) {
     root.setAttribute("data-theme", theme);
     const meta = $('meta[name="theme-color"]');
-    if (meta) meta.setAttribute("content", theme === "dark" ? "#0f1509" : "#74bc20");
+    if (meta) meta.setAttribute("content", "#0c0c0c");
   }
 
   const stored = localStorage.getItem(THEME_KEY);
   const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-  applyTheme(stored || (prefersDark ? "dark" : "light"));
+  applyTheme(stored || "dark");
 
   document.addEventListener("click", (e) => {
     const toggle = e.target.closest("[data-theme-toggle]");

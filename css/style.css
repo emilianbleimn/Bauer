@@ -1,93 +1,93 @@
 /* =================================================================
-   Dämmstoffe Bauer — Design System & Styles
-   Brand palette: leaf green (#74bc20) + deep navy · Figtree · clean
+   Dämmstoffe Bauer — Luxury Dark Skin
+   Cinematic black · champagne-gold accent · Jost · thin precise lines
    ================================================================= */
 
 /* ---------- Design tokens ---------- */
 :root {
-  /* Brand — leaf green (matches site --primary #74bc20) */
-  --leaf-50:  #f1f7e7;
-  --leaf-100: #e3efce;
-  --leaf-200: #c9e2a3;
-  --leaf-300: #a9d16e;
-  --leaf-400: #8dc23f;
-  --leaf-500: #74bc20;
-  --leaf-600: #5b9a12;
-  --leaf-700: #497c10;
-  --leaf-800: #38610d;
-  --leaf-900: #223c0a;
+  /* Accent — champagne / rose-gold (metallic) */
+  --leaf-50:  #faf6ec;
+  --leaf-100: #f2e9d5;
+  --leaf-200: #e6d5b3;
+  --leaf-300: #d8bd86;
+  --leaf-400: #cbaa6b;
+  --leaf-500: #c3a15f;
+  --leaf-600: #a98748;
+  --leaf-700: #866a38;
+  --leaf-800: #5f4b28;
+  --leaf-900: #3a2e19;
 
-  /* Deep navy (matches site #01205e) — dark surfaces & depth */
-  --navy-300: #3559a0;
-  --navy-400: #1d3f83;
-  --navy-500: #01205e;
-  --navy-600: #011a4e;
-  --navy-700: #01143d;
-  --navy-800: #010e2b;
-  --navy-900: #01091d;
+  /* Charcoal / near-black surfaces */
+  --navy-300: #2b2b2b;
+  --navy-400: #1e1e1e;
+  --navy-500: #141414;
+  --navy-600: #101010;
+  --navy-700: #0b0b0b;
+  --navy-800: #070707;
+  --navy-900: #000000;
 
   /* Semantic */
-  --primary: var(--leaf-600);
-  --primary-strong: var(--leaf-700);
-  --primary-soft: var(--leaf-50);
+  --primary: var(--leaf-500);
+  --primary-strong: var(--leaf-300);
+  --primary-soft: rgba(195, 161, 95, .12);
   --accent: var(--leaf-500);
-  --accent-strong: var(--leaf-600);
+  --accent-strong: var(--leaf-300);
 
-  /* Neutrals (light theme — clean, faint green-grey) */
-  --paper: #f8faf3;
-  --surface: #ffffff;
-  --surface-2: #f1f7e7;
-  --ink: #17240e;
-  --ink-soft: #4d5b41;
-  --ink-faint: #8b9880;
-  --border: #e4ebd9;
-  --border-strong: #cfdcbf;
+  /* Neutrals — cinematic dark */
+  --paper: #0c0c0c;
+  --surface: #151515;
+  --surface-2: #1b1b1b;
+  --ink: #f0f0f0;
+  --ink-soft: #a6a6a6;
+  --ink-faint: #6e6e6e;
+  --border: #2a2a2a;
+  --border-strong: #3c3c3c;
 
-  /* Effects */
-  --shadow-sm: 0 1px 2px rgba(30, 45, 15, .06), 0 1px 3px rgba(30, 45, 15, .05);
-  --shadow-md: 0 6px 16px rgba(30, 50, 15, .08), 0 2px 6px rgba(30, 50, 15, .05);
-  --shadow-lg: 0 18px 40px rgba(24, 45, 12, .14), 0 6px 14px rgba(24, 45, 12, .08);
-  --shadow-glow: 0 10px 30px rgba(116, 188, 32, .3);
+  /* Effects (subtle on black) */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, .5);
+  --shadow-md: 0 12px 30px rgba(0, 0, 0, .55);
+  --shadow-lg: 0 30px 70px rgba(0, 0, 0, .6);
+  --shadow-glow: 0 12px 40px rgba(195, 161, 95, .18);
 
-  --radius-sm: 9px;
-  --radius: 14px;
-  --radius-lg: 20px;
-  --radius-xl: 26px;
+  --radius-sm: 2px;
+  --radius: 3px;
+  --radius-lg: 5px;
+  --radius-xl: 8px;
   --radius-pill: 999px;
 
-  --container: 1180px;
-  --gutter: clamp(1.1rem, 4vw, 2.4rem);
+  --container: 1200px;
+  --gutter: clamp(1.1rem, 4vw, 2.6rem);
 
   --ease: cubic-bezier(.22, .61, .36, 1);
   --ease-out: cubic-bezier(.16, 1, .3, 1);
 
-  --font-display: "Figtree", "Segoe UI", system-ui, sans-serif;
-  --font-body: "Figtree", "Segoe UI", system-ui, sans-serif;
+  --font-display: "Jost", "Segoe UI", system-ui, sans-serif;
+  --font-body: "Jost", "Segoe UI", system-ui, sans-serif;
 
-  --header-h: 76px;
+  --header-h: 82px;
 }
 
-/* Dark theme — deep green-charcoal */
-[data-theme="dark"] {
-  --primary: var(--leaf-400);
+/* Toggle bleibt bewusst dunkel (Luxury-Skin ist dark-only) */
+[data-theme="dark"], [data-theme="light"] {
+  --primary: var(--leaf-500);
   --primary-strong: var(--leaf-300);
-  --primary-soft: rgba(116, 188, 32, .14);
+  --primary-soft: rgba(195, 161, 95, .12);
   --accent: var(--leaf-500);
-  --accent-strong: var(--leaf-400);
+  --accent-strong: var(--leaf-300);
 
-  --paper: #0f1509;
-  --surface: #17210f;
-  --surface-2: #1e2a14;
-  --ink: #ecf3e2;
-  --ink-soft: #b6c3a8;
-  --ink-faint: #85927a;
-  --border: #28331a;
-  --border-strong: #384726;
+  --paper: #0c0c0c;
+  --surface: #151515;
+  --surface-2: #1b1b1b;
+  --ink: #f0f0f0;
+  --ink-soft: #a6a6a6;
+  --ink-faint: #6e6e6e;
+  --border: #2a2a2a;
+  --border-strong: #3c3c3c;
 
-  --shadow-sm: 0 1px 2px rgba(0, 0, 0, .4);
-  --shadow-md: 0 6px 18px rgba(0, 0, 0, .45);
-  --shadow-lg: 0 20px 44px rgba(0, 0, 0, .55);
-  --shadow-glow: 0 10px 32px rgba(116, 188, 32, .3);
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, .5);
+  --shadow-md: 0 12px 30px rgba(0, 0, 0, .55);
+  --shadow-lg: 0 30px 70px rgba(0, 0, 0, .6);
+  --shadow-glow: 0 12px 40px rgba(195, 161, 95, .18);
 }
 
 /* ---------- Reset & base ---------- */
@@ -637,7 +637,7 @@ p { color: var(--ink-soft); }
   font-size: .85rem;
 }
 .media-card.has-photo {
-  background: linear-gradient(to top, rgba(1,20,55,.92), rgba(1,20,55,.42)), var(--photo, none);
+  background: linear-gradient(to top, rgba(8,8,8,.9), rgba(8,8,8,.45)), var(--photo, none);
   background-size: cover;
   background-position: center;
 }
@@ -714,7 +714,7 @@ p { color: var(--ink-soft); }
 .cta-band p { color: rgba(255,255,255,.85); max-width: 50ch; margin: 1rem auto 2rem; }
 .cta-band .hero__cta { justify-content: center; }
 .cta-band.has-photo {
-  background: linear-gradient(135deg, rgba(1,25,66,.9), rgba(1,14,40,.84)), var(--photo, none);
+  background: linear-gradient(135deg, rgba(8,8,8,.82), rgba(0,0,0,.78)), var(--photo, none);
   background-size: cover;
   background-position: center;
 }
@@ -1471,3 +1471,108 @@ input[type="range"]::-moz-range-thumb {
   ::view-transition-old(root) { animation: vt-slide-out .42s cubic-bezier(.22, .61, .36, 1) both; }
   ::view-transition-new(root) { animation: vt-slide-in .42s cubic-bezier(.16, 1, .3, 1) both; }
 }
+
+/* ================================================================
+   LUXURY SKIN — dunkel, champagner-gold, minimal (cinematischer Stil)
+   ================================================================ */
+body { font-weight: 300; letter-spacing: .01em; }
+h1, h2, h3, h4 { font-weight: 300; letter-spacing: .012em; }
+h3 { font-weight: 400; }
+.lead { font-weight: 300; }
+::selection { background: rgba(195,161,95,.35); color: #fff; }
+.gradient-text {
+  background: linear-gradient(100deg, #ead6a6, #c3a15f 55%, #9c7c46);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+
+/* Eyebrow → minimal gold label with a hairline */
+.eyebrow { background: none; padding: 0; border-radius: 0; color: var(--accent); font-weight: 500; font-size: .72rem; letter-spacing: .3em; gap: .8rem; }
+.eyebrow::before { width: 26px; height: 1px; border-radius: 0; background: var(--accent); }
+.section-head.center .eyebrow { justify-content: center; }
+
+/* Buttons → understated, uppercase, thin line */
+.btn { border-radius: 0; text-transform: uppercase; letter-spacing: .18em; font-weight: 500; font-size: .74rem; padding: 1.05rem 2rem; box-shadow: none; border: 1px solid var(--accent); --bg: var(--accent); --fg: #0c0c0c; }
+.btn svg { width: 1em; height: 1em; }
+.btn:hover { transform: none; box-shadow: none; --bg: transparent; --fg: var(--accent); }
+.btn--accent { --bg: var(--accent); --fg: #0c0c0c; border-color: var(--accent); }
+.btn--accent:hover { --bg: transparent; --fg: var(--accent); box-shadow: none; }
+.btn--ghost { --bg: transparent; --fg: var(--ink); border-color: var(--border-strong); }
+.btn--ghost:hover { --bg: transparent; --fg: var(--accent); border-color: var(--accent); box-shadow: none; }
+.btn--light { --bg: transparent; --fg: #fff; border-color: rgba(255,255,255,.55); }
+.btn--light:hover { --bg: #fff; --fg: #0c0c0c; }
+.btn--lg { padding: 1.15rem 2.5rem; font-size: .76rem; }
+.link-arrow { text-transform: uppercase; letter-spacing: .14em; font-size: .78rem; font-weight: 500; }
+
+/* Header → transparent over hero, solid on scroll; white signature logo */
+.site-header { border-bottom: 1px solid transparent; }
+.site-header.scrolled { background: rgba(10,10,10,.82); backdrop-filter: blur(16px) saturate(1.1); border-bottom-color: var(--border); }
+.brand-logo { filter: brightness(0) invert(1); height: 40px; }
+.nav__link { text-transform: uppercase; letter-spacing: .16em; font-size: .74rem; font-weight: 500; color: var(--ink-soft); }
+.nav__link:hover { background: none; color: var(--ink); }
+.nav__link.is-active { color: var(--accent); }
+.nav__link.is-active::after { background: var(--accent); }
+.icon-btn { color: var(--ink-soft); }
+.icon-btn:hover { background: none; color: var(--accent); }
+.cart-count { background: var(--accent); color: #0c0c0c; }
+
+/* Cards / panels → flat, thin border, sharp corners */
+.card, .tile, .product, .info-item, .form-card, .config-shell, .stat, .referenz, .media-shot, .config-shell .config-progress {
+  border-radius: 0; box-shadow: none; background: var(--surface); border: 1px solid var(--border);
+}
+.card:hover, .tile:hover, .product:hover, .referenz:hover, .info-item:hover { transform: none; box-shadow: none; border-color: var(--accent); }
+.card__icon, .tile__icon, .info-item .info-ic, .choice__icon { background: rgba(195,161,95,.09); border-radius: 0; color: var(--accent); border: 1px solid var(--border); }
+.card:hover .card__icon, .tile:hover .tile__icon { transform: none; background: rgba(195,161,95,.16); color: var(--accent); }
+.zone-ico, .zone-chip img { filter: brightness(0) invert(.82); }
+
+/* Marquee / strip */
+.strip { background: var(--surface); border-block: 1px solid var(--border); }
+.strip__item { color: var(--ink-faint); text-transform: uppercase; letter-spacing: .18em; font-weight: 400; font-size: .8rem; }
+.strip__item svg { color: var(--accent); }
+
+/* Filter chips / search */
+.chip { border-radius: 0; text-transform: uppercase; letter-spacing: .1em; font-size: .74rem; }
+.chip.active { background: var(--accent); color: #0c0c0c; border-color: var(--accent); }
+.input, textarea.input, select.input, .search-box input { border-radius: 0; background: #101010; border-color: var(--border-strong); color: var(--ink); }
+
+/* Zone chips (hero) */
+.zone-chip { border-radius: 0; background: rgba(18,18,18,.55); border-color: var(--border-strong); color: var(--ink); backdrop-filter: blur(6px); text-transform: uppercase; letter-spacing: .12em; font-size: .76rem; }
+.zone-chip:hover { border-color: var(--accent); }
+
+/* Referenz tag / product tag / eyebrow pills → gold hairline labels */
+.referenz-tag, .product__tag { background: rgba(195,161,95,.1); color: var(--accent); border-radius: 0; }
+.referenz-liste li { border-radius: 0; background: #101010; }
+.add-btn { border-radius: 0; background: rgba(195,161,95,.1); color: var(--accent); text-transform: uppercase; letter-spacing: .1em; font-size: .74rem; }
+.add-btn:hover { background: var(--accent); color: #0c0c0c; }
+
+/* Footer */
+.site-footer { background: #000; }
+.footer-col h4 { text-transform: uppercase; letter-spacing: .2em; font-size: .76rem; color: var(--accent); }
+.footer-partners img { background: #f0f0f0; }
+
+/* Section rhythm + elegant reveal */
+.section-head h2 { letter-spacing: .015em; }
+.reveal { transition-duration: .9s; }
+.cta-band { background: #101010; }
+
+/* Preloader → dark + gold */
+.preloader { background: #0c0c0c !important; }
+.preloader__bar { background: rgba(195,161,95,.25); }
+.preloader__bar span { background: var(--accent); }
+
+/* ---------- Cinematic full-bleed hero ---------- */
+.hero-lux { position: relative; min-height: 100vh; display: flex; align-items: flex-end; overflow: hidden; }
+.hero-lux__media { position: absolute; inset: 0; z-index: 0; }
+.hero-lux .slide { position: absolute; inset: 0; background-size: cover; background-position: center; opacity: 0; transform: scale(1.06); transition: opacity 1.2s var(--ease), transform 7s ease; }
+.hero-lux .slide.is-active { opacity: 1; transform: scale(1); }
+.hero-lux__scrim { position: absolute; inset: 0; z-index: 1; background: linear-gradient(180deg, rgba(10,10,10,.72) 0%, rgba(10,10,10,.2) 34%, rgba(10,10,10,.82) 100%); }
+.hero-lux__inner { position: relative; z-index: 2; max-width: 860px; padding-block: clamp(2rem, 10vh, 7rem) clamp(3.5rem, 11vh, 7.5rem); }
+.hero-lux h1 { font-size: clamp(2.5rem, 6.4vw, 5.4rem); line-height: 1.04; margin: 1.5rem 0 2.2rem; }
+.hero-lux .lead { color: #d4d4d4; max-width: 46ch; }
+.hero-lux .hero__cta { margin-top: 2.4rem; }
+.hero-lux .zone-chips { margin-top: 2.4rem; }
+.hero-lux .slider-dots { position: absolute; z-index: 3; right: var(--gutter); bottom: clamp(3.5rem, 11vh, 7.5rem); }
+.hero-lux .slider-dots button { background: rgba(255,255,255,.4); }
+.hero-lux .slider-dots button.is-active { background: var(--accent); }
+
+/* sub-page heros: subtle gold glow instead of green */
+.hero__bg { background: radial-gradient(60% 60% at 50% -10%, rgba(195,161,95,.08), transparent 70%); }
