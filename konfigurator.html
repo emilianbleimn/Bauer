@@ -11,7 +11,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
-  <style>.preloader{position:fixed;inset:0;z-index:9999;display:grid;place-items:center;background:linear-gradient(135deg,#74bc20,#5b9a12)}.preloader.is-hidden{opacity:0;visibility:hidden}</style>
+  <style>.preloader{position:fixed;inset:0;z-index:9999;display:grid;place-items:center;background:linear-gradient(135deg,#74bc20,#5b9a12)}.preloader.is-hidden{opacity:0;visibility:hidden}html.no-preloader .preloader{display:none}</style>
+  <script>(function(){try{var n=performance.getEntriesByType("navigation")[0];var t=n?n.type:((performance.navigation&&performance.navigation.type===1)?"reload":"navigate");var s=false;try{s=sessionStorage.getItem("db-pre")==="1";}catch(e){}var show=(t==="reload")||!s;try{sessionStorage.setItem("db-pre","1");}catch(e){}if(!show){document.documentElement.classList.add("no-preloader");}}catch(e){}})();</script>
 </head>
 <body>
   <!-- Ladebildschirm (zeigt sich bei jedem Seitenaufruf, blendet nach dem Laden aus) -->
@@ -33,6 +34,7 @@
           <li><a class="nav__link" href="index.html">Startseite</a></li>
           <li><a class="nav__link is-active" href="konfigurator.html">Konfigurator</a></li>
           <li><a class="nav__link" href="sortiment.html">Sortiment</a></li>
+          <li><a class="nav__link" href="index.html#referenzen">Bewertungen</a></li>
           <li><a class="nav__link" href="index.html#kontakt">Kontakt</a></li>
           <li><a class="btn btn--accent" href="index.html#kontakt">Kontakt aufnehmen</a></li>
         </ul>
