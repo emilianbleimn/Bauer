@@ -1407,3 +1407,43 @@ input[type="range"]::-moz-range-thumb {
 @media (max-width: 860px) {
   .hero-slider { aspect-ratio: 16 / 11; }
 }
+
+/* Referenz-/Vorschau-Karten (Stil wie ebsolutions.info) */
+.referenzen { display: grid; gap: 2rem; }
+.referenz {
+  display: grid;
+  grid-template-columns: 1.05fr .95fr;
+  gap: clamp(1.4rem, 3vw, 2.4rem);
+  align-items: center;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.1rem;
+  transition: border-color .35s var(--ease), box-shadow .35s var(--ease), transform .35s var(--ease-out);
+}
+.referenz:hover { border-color: color-mix(in srgb, var(--primary) 34%, var(--border)); box-shadow: var(--shadow-lg); transform: translateY(-4px); }
+.referenz:nth-child(even) .referenz-bild { order: 2; }
+.referenz-bild {
+  display: block; position: relative;
+  border-radius: var(--radius); overflow: hidden;
+  border: 1px solid var(--border); box-shadow: var(--shadow-md);
+}
+.referenz-bild img { width: 100%; height: 100%; object-fit: cover; aspect-ratio: 16 / 10; display: block; transition: transform .6s var(--ease-out); }
+.referenz-bild:hover img { transform: scale(1.05); }
+.referenz-text { padding: .4rem 1.2rem; }
+.referenz-tag {
+  display: inline-block;
+  font-family: var(--font-display); font-weight: 700; font-size: .8rem;
+  letter-spacing: .04em; text-transform: uppercase;
+  color: var(--primary); background: var(--primary-soft);
+  padding: .35rem .8rem; border-radius: var(--radius-pill); margin-bottom: .9rem;
+}
+.referenz-text h3 { font-size: clamp(1.35rem, 2.4vw, 1.7rem); margin-bottom: .5rem; }
+.referenz-text p { font-size: .98rem; margin-bottom: 1.1rem; }
+.referenz-liste { display: flex; flex-wrap: wrap; gap: .5rem; margin-bottom: 1.4rem; }
+.referenz-liste li { font-size: .84rem; font-weight: 600; color: var(--ink-soft); background: var(--surface-2); border: 1px solid var(--border); padding: .34rem .75rem; border-radius: var(--radius-pill); }
+@media (max-width: 820px) {
+  .referenz { grid-template-columns: 1fr; gap: 1.2rem; }
+  .referenz:nth-child(even) .referenz-bild { order: 0; }
+  .referenz-text { padding: 0 .3rem .3rem; }
+}
