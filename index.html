@@ -11,8 +11,16 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
+  <style>.preloader{position:fixed;inset:0;z-index:9999;display:grid;place-items:center;background:linear-gradient(135deg,#74bc20,#5b9a12)}.preloader.is-hidden{opacity:0;visibility:hidden}</style>
 </head>
 <body>
+  <!-- Ladebildschirm (zeigt sich bei jedem Seitenaufruf, blendet nach dem Laden aus) -->
+  <div class="preloader" id="preloader" role="status" aria-label="Seite wird geladen">
+    <div class="preloader__inner">
+      <img class="preloader__logo" src="assets/img/logo.png" alt="Dämmstoffe Bauer" width="200" height="50" />
+      <div class="preloader__bar"><span></span></div>
+    </div>
+  </div>
   <div class="scroll-progress" aria-hidden="true"></div>
 
   <!-- ============ HEADER ============ -->
@@ -241,41 +249,26 @@
       </div>
     </section>
 
-    <!-- ============ REFERENZEN / EINBLICKE (Vorschau-Karten im ebsolutions-Stil) ============
-         Vorschau-Karten wie auf ebsolutions.info. Für echte Referenz-Projekte
-         einfach pro Karte Bild, Titel, Tag, Beschreibung und Link austauschen. -->
+    <!-- ============ GOOGLE-BEWERTUNGEN (Referenzen) ============
+         Echte Google-Rezensionen via Elfsight-Widget – dieselbe Integration
+         wie auf bauer-daemmstoffe.de (App-ID 7d48ad7e-...). Das Widget lädt
+         extern von static.elfsight.com und ist ggf. an die Live-Domain gebunden. -->
     <section class="section" id="referenzen">
       <div class="container">
         <div class="section-head center reveal">
-          <span class="eyebrow">Einblicke &amp; Referenzen</span>
-          <h2>Aus der Praxis</h2>
-          <p>Ein Eindruck von unserem Fachhandel und unserer Arbeit vor Ort in Walldorf.</p>
+          <span class="eyebrow">Referenzen</span>
+          <h2>Das sagen unsere Kunden</h2>
+          <p>Echte Google-Bewertungen unserer Kundinnen und Kunden aus Walldorf und Umgebung.</p>
         </div>
-        <div class="referenzen">
-          <article class="referenz reveal">
-            <a class="referenz-bild" href="sortiment.html" aria-label="Zum Sortiment">
-              <img src="assets/img/store-04.jpg" alt="Regale mit Dämmstoffen in unserem Lager" width="1280" height="800" loading="lazy" />
-            </a>
-            <div class="referenz-text">
-              <span class="referenz-tag">Fachhandel · Walldorf</span>
-              <h3>Großes Lager, sofort verfügbar</h3>
-              <p>Dämmstoffe für Wand, Dach, Boden und Keller – dazu Putz, Kleber, Befestigung und Werkzeug. Bei uns bekommen Sie alles für Ihr Projekt direkt ab Lager.</p>
-              <ul class="referenz-liste"><li>Wärmedämmung</li><li>WDVS-Zubehör</li><li>Werkzeug</li></ul>
-              <a class="btn btn--ghost" href="sortiment.html">Sortiment ansehen</a>
-            </div>
-          </article>
-          <article class="referenz reveal">
-            <a class="referenz-bild" href="konfigurator.html" aria-label="Zum Konfigurator">
-              <img src="assets/img/store-03.jpg" alt="Beratung und Materialauswahl im Fachhandel" width="1280" height="800" loading="lazy" />
-            </a>
-            <div class="referenz-text">
-              <span class="referenz-tag">Beratung · Projektbegleitung</span>
-              <h3>Von der Planung bis zur Umsetzung</h3>
-              <p>Wir beraten persönlich, konfigurieren mit Ihnen den passenden Warenkorb für Ihr Haus und liefern die passenden Materialien – vom Keller bis zum Dach.</p>
-              <ul class="referenz-liste"><li>Persönliche Beratung</li><li>Konfigurator</li><li>Materiallieferung</li></ul>
-              <a class="btn btn--ghost" href="konfigurator.html">Konfigurator starten</a>
-            </div>
-          </article>
+        <div class="reviews reveal">
+          <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+          <div class="elfsight-app-7d48ad7e-b245-4f33-a5db-ac593b11cdb8" data-elfsight-app-lazy></div>
+        </div>
+        <div class="reviews-cta reveal">
+          <a class="btn btn--ghost" href="https://maps.app.goo.gl/fXohCYvGBzk7t7Ap6" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 2.9 6 6.1.9-4.5 4.3 1 6.8L12 18l-5.5 3 1-6.8L3 9.9 9.1 9z"/></svg>
+            Alle Bewertungen auf Google ansehen
+          </a>
         </div>
       </div>
     </section>

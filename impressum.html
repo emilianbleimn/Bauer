@@ -20,8 +20,16 @@
     .prose a { color: var(--primary); font-weight: 600; }
     .note-box { background: var(--primary-soft); border: 1px dashed var(--leaf-300); border-radius: var(--radius); padding: 1.2rem 1.4rem; font-size: .92rem; }
   </style>
+  <style>.preloader{position:fixed;inset:0;z-index:9999;display:grid;place-items:center;background:linear-gradient(135deg,#74bc20,#5b9a12)}.preloader.is-hidden{opacity:0;visibility:hidden}</style>
 </head>
 <body>
+  <!-- Ladebildschirm (zeigt sich bei jedem Seitenaufruf, blendet nach dem Laden aus) -->
+  <div class="preloader" id="preloader" role="status" aria-label="Seite wird geladen">
+    <div class="preloader__inner">
+      <img class="preloader__logo" src="assets/img/logo.png" alt="Dämmstoffe Bauer" width="200" height="50" />
+      <div class="preloader__bar"><span></span></div>
+    </div>
+  </div>
   <div class="scroll-progress" aria-hidden="true"></div>
 
   <header class="site-header">

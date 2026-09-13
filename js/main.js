@@ -284,6 +284,19 @@
     );
   }
 
+  /* ---------- Ladebildschirm ausblenden ---------- */
+  const preloader = document.getElementById("preloader");
+  if (preloader) {
+    const hidePre = () => {
+      if (preloader.classList.contains("is-hidden")) return;
+      preloader.classList.add("is-hidden");
+      setTimeout(() => preloader.remove(), 650);
+    };
+    if (document.readyState === "complete") setTimeout(hidePre, 450);
+    else window.addEventListener("load", () => setTimeout(hidePre, 350));
+    setTimeout(hidePre, 4000); // Sicherheits-Fallback
+  }
+
   /* ---------- current year ---------- */
   $$("[data-year]").forEach((el) => (el.textContent = new Date().getFullYear()));
 })();
