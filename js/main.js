@@ -297,6 +297,15 @@
     setTimeout(hidePre, 4000); // Sicherheits-Fallback
   }
 
+  /* ---------- Seiten-Slide bei Reload überspringen (nur bei Navigation sliden) ---------- */
+  window.addEventListener("pageswap", (e) => {
+    try {
+      if (e.viewTransition && e.activation && e.activation.navigationType === "reload") {
+        e.viewTransition.skipTransition();
+      }
+    } catch (err) { /* noop */ }
+  });
+
   /* ---------- current year ---------- */
   $$("[data-year]").forEach((el) => (el.textContent = new Date().getFullYear()));
 })();
