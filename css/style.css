@@ -1576,3 +1576,33 @@ h3 { font-weight: 400; }
 
 /* sub-page heros: subtle gold glow instead of green */
 .hero__bg { background: radial-gradient(60% 60% at 50% -10%, rgba(195,161,95,.08), transparent 70%); }
+
+/* ---------- Editorial Bild-Text-Strecke (lange Texte schön gesetzt) ---------- */
+.editorial { display: grid; gap: clamp(2.6rem, 6vw, 5.5rem); margin-top: clamp(1.5rem, 4vw, 3rem); }
+.edi { display: grid; grid-template-columns: 1.05fr 1fr; gap: clamp(2rem, 5vw, 4.5rem); align-items: center; }
+.edi:nth-child(even) .edi__media { order: 2; }
+.edi__media { position: relative; overflow: hidden; border: 1px solid var(--border); aspect-ratio: 4 / 3.1; }
+.edi__media img { width: 100%; height: 100%; object-fit: cover; filter: saturate(.9) brightness(.9) contrast(1.02); transition: transform 1.3s var(--ease-out); }
+.edi:hover .edi__media img { transform: scale(1.05); }
+.edi__media::after { content: ""; position: absolute; inset: 0; box-shadow: inset 0 0 130px rgba(0,0,0,.55); pointer-events: none; }
+.edi__no { display: block; font-family: var(--font-display); font-weight: 300; font-size: clamp(2.4rem, 5vw, 3.6rem); line-height: 1; letter-spacing: .04em; color: transparent; -webkit-text-stroke: 1px var(--border-strong); margin-bottom: 1rem; }
+.edi__text h3 { font-size: clamp(1.5rem, 2.7vw, 2.1rem); margin-bottom: 1.2rem; padding-bottom: 1.2rem; position: relative; }
+.edi__text h3::after { content: ""; position: absolute; left: 0; bottom: 0; width: 48px; height: 1px; background: var(--accent); }
+.edi__text p { font-size: 1.02rem; line-height: 1.95; color: var(--ink-soft); max-width: 56ch; }
+@media (max-width: 820px) {
+  .edi { grid-template-columns: 1fr; gap: 1.6rem; }
+  .edi:nth-child(even) .edi__media { order: 0; }
+  .edi__text p { max-width: none; }
+}
+
+/* ---------- Full-bleed Statement-Band ---------- */
+.feature-band { position: relative; min-height: 62vh; display: flex; align-items: center; overflow: hidden; background-image: var(--photo, none); background-size: cover; background-position: center; }
+.feature-band__scrim { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(8,8,8,.86) 0%, rgba(8,8,8,.5) 48%, rgba(8,8,8,.24) 100%); }
+.feature-band__inner { position: relative; z-index: 1; max-width: 720px; }
+.feature-band h2 { font-size: clamp(1.9rem, 4vw, 3.1rem); margin-top: 1.3rem; line-height: 1.12; }
+
+/* ---------- Galerie im Dark-Luxury-Look ---------- */
+.gallery__item { border-radius: 0; border: 1px solid var(--border); box-shadow: none; }
+.gallery__item img { filter: saturate(.9) brightness(.92); }
+.gallery__item:hover img { transform: scale(1.06); }
+.gallery__cap { text-transform: uppercase; letter-spacing: .14em; font-size: .8rem; font-weight: 500; }
